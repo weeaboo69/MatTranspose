@@ -53,7 +53,21 @@ public:
 	}
 	void transpose()
 	{
-
+		int col2 = row;
+        	int row2 = col;
+        	int cell2[100][100];
+       	 	col = col2;
+        	row = row2;
+        	for (int a = 0; a < row; a++)
+        	{
+            		for (int b = 0;b < col;b++)
+            			cell2[a][b] = cell[b][a];
+        	}
+        	for (int a = 0; a < row; a++)
+        	{
+            		for (int b = 0; b < col; b++)
+                		cell[a][b] = cell2[a][b];
+        	}
 	}
 };
 class App
